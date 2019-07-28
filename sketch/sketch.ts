@@ -6,7 +6,7 @@ let terrain: Terrain
 function setup() {
   switch (demo) {
     case 'guesser':
-      guesser = new Guesser('Programmers took our jerbs')
+      guesser = new Guesser('genetic algorithms are awesome')
       guesser.setup()
       break
 

@@ -16,6 +16,7 @@ class Guesser {
 
   setup() {
     createCanvas(windowWidth, windowHeight)
+    frameRate(15)
     this.started = performance.now()
   }
 
@@ -66,12 +67,13 @@ class Guesser {
       if (!this.finished) this.finished = performance.now()
 
       fill(50, 200, 50)
+      textSize(30)
       const runtime = this.finished - this.started
       const perGeneration = runtime / this.generations
       text(
         `Finished in: ${runtime.toFixed(2)}ms (${perGeneration.toFixed(
           2
-        )}ms per generation)`,
+        )}ms/gen)`,
         width / 2,
         height / 2 + 250
       )
